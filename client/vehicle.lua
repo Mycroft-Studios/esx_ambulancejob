@@ -120,6 +120,12 @@ function StoreNearbyVehicle(playerCoords)
 					vehicle = v,
 					plate = ESX.Math.Trim(GetVehicleNumberPlateText(v))
 				})
+			else
+				TaskLeaveVehicle(PlayerPedId(), v, 0)
+				table.insert(vehiclePlates, {
+					vehicle = v,
+					plate = ESX.Math.Trim(GetVehicleNumberPlateText(v))
+				})
 			end
 		end
 	else
@@ -274,7 +280,7 @@ end
 
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(0)
+		Citizen.Wait(5)
 
 		if isInShopMenu then
 			DisableControlAction(0, 75, true)  -- Disable exit vehicle

@@ -450,7 +450,7 @@ function OpenCloakroomMenu()
 					deadPlayerBlips[playerId] = nil
 				end
 			end)
-			if data.current.uniform then
+		elseif data.current.uniform then
 				setUniform(data.current.uniform, playerPed)
 			elseif data.current.value == 'freemode_ped' then
 				local modelHash
@@ -470,8 +470,7 @@ function OpenCloakroomMenu()
 						TriggerEvent('esx:restoreLoadout')
 					end)
 				end)
-			end
-		menu.close()
+      end
 	end, function(data, menu)
 		menu.close()
 	end)

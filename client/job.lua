@@ -438,7 +438,7 @@ function OpenCloakroomMenu()
 		align    = 'top-left',
 		elements = {
 			{label = _U('ems_clothes_civil'), value = 'citizen_wear'},
-			{label = _U('ems_clothes_ems'), uniform = grade},
+			{label = _U('ems_clothes_ems'), uniform = grade}
 	}}, function(data, menu)
 		if data.current.value == 'citizen_wear' then
 			ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin, jobSkin)
